@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #00AAFF, #00FF6C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.App {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(100px);
+    overflow: hiden;
+    box-shadow: 0px 2px 64px rgba(0, 0 , 0, 0.2);
+    border-radius: 10px;
+}
+
+.display {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: black;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 10px 10px 0 0;
+}
+
+.display .current{
+    font-size: 60px;
+    font-weight: 300;
+}
+
+button {
+    appearance: none;
+    border: none;
+    color: #fff;
+    background-color: black;
+    font-size: 40px;
+    padding: 16px;
+    cursor: pointer;
+    transiton: 0.4s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 8rem);
+    border-radius: 0 0 10px 10px;
+}
+
+.spanTwo {
+    grid-column: span 2;
+    background-color: orange;
+}
+
+.operator {
+    background-color: orange;
+}
